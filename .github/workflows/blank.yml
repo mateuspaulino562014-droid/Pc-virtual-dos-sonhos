@@ -1,0 +1,60 @@
+# SIMULAÇÃO DE PC GAMER VIRTUAL
+
+
+import time
+import random
+import os
+
+def limpar():
+    os.system("cls" if os.name == "nt" else "clear")
+
+def iniciar_pc():
+    limpar()
+    print("=" * 40)
+    print("       PC GAMER VIRTUAL")
+    print("=" * 40)
+    print("Inicializando sistema...")
+    time.sleep(1)
+    print("Carregando Windows virtual...")
+    time.sleep(1)
+    print("Iniciando GPU simulada...")
+    time.sleep(1)
+    print("Conectando ao servidor...")
+    time.sleep(1)
+
+    print("\nPC VIRTUAL INICIADO!")
+    print("-" * 40)
+    print("CPU: 8 núcleos (simulação)")
+    print("RAM: 16 GB (simulação)")
+    print("GPU: RTX 4090 (simulação)")
+    print("Sistema: Windows 11 (simulação)")
+    print("-" * 40)
+
+    while True:
+        print("\n1 - Simular jogo")
+        print("2 - Ver desempenho")
+        print("3 - Desligar PC")
+        opcao = input("\nEscolha: ")
+
+        if opcao == "1":
+            print("\nIniciando jogo...")
+            time.sleep(2)
+            print("FPS:", random.randint(60, 144))
+            print("Resolução: 1920x1080")
+            print("Jogo iniciado em modo de simulação!")
+
+        elif opcao == "2":
+            print("\nCPU:", random.randint(20, 80), "%")
+            print("RAM:", random.randint(4, 14), "GB / 16 GB")
+            print("GPU:", random.randint(30, 95), "%")
+
+        elif opcao == "3":
+            print("\nDesligando PC virtual...")
+            time.sleep(1)
+            break
+
+        else:
+            print("Opção inválida!")
+
+if __name__ == "__main__":
+    iniciar_pc()
